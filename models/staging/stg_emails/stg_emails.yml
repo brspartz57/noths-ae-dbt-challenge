@@ -16,3 +16,5 @@ models:
         description: Whether the email was opened (True or False)
       - name: clicked
         description: Whether the email was clicked (True or False)
+      - name: last_sent_email_id
+        description: email id of the previously sent email

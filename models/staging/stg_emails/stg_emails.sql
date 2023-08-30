@@ -21,7 +21,8 @@ SELECT
   e.sent_date,
   e.subject,
   e.opened,
-  e.clicked
+  e.clicked,
+  LAG(email_id) OVER (PARTITION BY customer_id ORDER BY sent_date) AS last_sent_email_id
 FROM SOURCE AS e
 )
 
