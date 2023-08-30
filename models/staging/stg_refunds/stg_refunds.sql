@@ -6,13 +6,13 @@
       )
 }}
 
-with source as (
+WITH source AS (
 
-  select * from {{ ref('refunds') }}
+  SELECT * FROM {{ ref('refunds') }}
 
 ),
 
-renamed as (
+renamed AS (
 
   SELECT
     id AS refund_id,
