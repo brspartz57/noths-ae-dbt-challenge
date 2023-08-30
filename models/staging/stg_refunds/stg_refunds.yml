@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_refunds
+    description: Staging source for refunds data
+    columns:
+      - name: refund_id
+        description: Unique identifier for the refund
+      - name: created_at
+        description: Date of refund creation
+      - name: updated_at
+        description: Date of last update for the refund
+      - name: order_id
+        description: Order ID associated with the refund
+      - name: amount_refunded
+        description: Amount refunded for the order
+      - name: refund_reason
+        description: Reason for the refund
