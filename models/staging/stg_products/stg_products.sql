@@ -15,17 +15,17 @@ WITH source AS (
 renamed as (
 
   SELECT
-    id AS product_id,
-    created_at,
-    updated_at,
-    name AS product_name,
-    description AS product_id,
-    price,
-    sale_price,
-    in_stock,
-    on_sale,
-    category_id
-  FROM source
+    p.id AS product_id,
+    p.created_at,
+    p.updated_at,
+    p.name AS product_name,
+    p.description AS product_id,
+    p.price,
+    p.sale_price,
+    p.in_stock,
+    p.on_sale,
+    p.category_id
+  FROM source AS p
 
 )
 
