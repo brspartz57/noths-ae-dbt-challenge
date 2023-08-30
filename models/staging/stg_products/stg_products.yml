@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_products
+    description: Staging source for products data
+    columns:
+      - name: id
+        description: Unique identifier for the product
+      - name: created_at
+        description: Date of product creation
+      - name: updated_at
+        description: Date of last update for the product
+      - name: name
+        description: Name of the product
+      - name: description
+        description: Description of the product
+      - name: price
+        description: Regular price of the product
+      - name: sale_price
+        description: Sale price of the product
+      - name: in_stock
+        description: Availability of the product (True or False)
+      - name: on_sale
+        description: Whether the product is on sale (True or False)
+      - name: category_id
+        description: Category ID to link the product to its category
