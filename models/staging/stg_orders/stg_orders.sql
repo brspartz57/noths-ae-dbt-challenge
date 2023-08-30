@@ -18,12 +18,13 @@ WITH source AS (
 renamed AS (
 
   SELECT
-    os.id AS order_item_id,
+    os.id AS order_id,
     os.created_at,
     os.updated_at,
-    os.order_id,
-    os.product_id,
-    os.quanity
+    os.customer_id,
+    os.order_total,
+    os.payment_method,
+    os.order_status
   FROM source AS os
 
 )
