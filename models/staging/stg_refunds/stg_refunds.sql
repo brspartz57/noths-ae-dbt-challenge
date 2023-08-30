@@ -15,13 +15,13 @@ WITH source AS (
 renamed AS (
 
   SELECT
-    id AS refund_id,
-    created_at,
-    updated_at,
-    order_id,
-    amount_refunded,
-    refund_reason
-  FROM source
+    r.id AS refund_id,
+    r.created_at,
+    r.updated_at,
+    r.order_id,
+    r.amount_refunded,
+    r.refund_reason
+  FROM source AS r
 
 )
 
