@@ -22,7 +22,7 @@ SELECT
   e.subject,
   e.opened,
   e.clicked
-
+FROM SOURCE AS e
 )
 
 SELECT * FROM renamed
