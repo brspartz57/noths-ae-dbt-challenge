@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_categories
+    description: Staging source for categories data
+    columns:
+      - name: category_id
+        description: Unique identifier for the category
+      - name: created_at
+        description: Date of category creation
+      - name: updated_at
+        description: Date of last update for the category
+      - name: category_name
+        description: Name of the category
