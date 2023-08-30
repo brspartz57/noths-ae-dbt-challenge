@@ -19,7 +19,7 @@ renamed as (
     p.created_at,
     p.updated_at,
     p.name AS product_name,
-    p.description AS product_id,
+    p.description AS product_description,
     p.price,
     p.sale_price,
     p.in_stock,
