@@ -8,7 +8,20 @@
 
 WITH source AS (
 
-  SELECT * FROM {{ ref('products') }}
+  SELECT 
+    p.id,
+    p.created_at,
+    p.updated_at,
+    p.name,
+    p.description,
+    p.price,
+    p.sale_price,
+    p.in_stock,
+    p.on_sale,
+    p.category_id,
+    c.category_name
+  FROM {{ ref('products') }} AS p
+  LEFT JOIN {{ ref('stg_categories') }} AS c ON c.category_id = p.category_id
 
 ),
 
@@ -24,7 +37,8 @@ renamed as (
     p.sale_price,
     p.in_stock,
     p.on_sale,
-    p.category_id
+    p.category_id,
+    p.category_name
   FROM source AS p
 
 )
